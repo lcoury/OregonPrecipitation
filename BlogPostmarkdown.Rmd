@@ -26,9 +26,6 @@ Analyzing these three areas will provide a solid understanding of how, or if, Or
 ```{r, echo = FALSE, warning = FALSE, results='hide'}
 #DATA CLEANING AND IMPORTING
 
-#set working directory
-setwd("C://Users//lccou//OneDrive//Documents//Econ//Econ_523")
-
 #set up libaries
 library(pacman)
 p_load(dplyr, ggplot2, readr, sf, tigris, maptools,
@@ -158,7 +155,7 @@ division_precip <- division_precip %>%
 #### Step 2: Import shape files and convert to data frame####
 
 #import shapefiles for climate divisions
-divisions <- readOGR("C://Users//lccou//OneDrive//Documents//Econ//Econ_523/GIS.OFFICIAL_CLIM_DIVISIONS.shp")
+divisions <- readOGR("GIS.OFFICIAL_CLIM_DIVISIONS.shp")
 
 #keep just oregion regions
 divisionsmap_oregon <- divisions[divisions@data$STATE == "Oregon", ]
